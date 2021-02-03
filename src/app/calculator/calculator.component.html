@@ -1,0 +1,11 @@
+<span>Numero 1: <input type="number" [(ngModel)]="primoVal"></span>
+<span>Numero 2: <input type="number" [(ngModel)]="secondoVal"></span>
+<span
+  *ngIf="primoVal && secondoVal"
+  [ngSwitch]="selectedOperator"
+>
+  <p *ngSwitchCase="'sum'">Risultato di {{ primoVal}} + {{ secondoVal }} = {{ primoVal + secondoVal}}</p>
+  <p *ngSwitchCase="'dif'">Risultato di {{ primoVal}} - {{ secondoVal }} = {{ primoVal - secondoVal}}</p>
+  <p *ngSwitchCase="'pow'">Risultato di {{ primoVal}} * {{ secondoVal }} = {{ primoVal * secondoVal}}</p>
+  <p *ngSwitchCase="'div'">Risultato di {{ primoVal}} / {{ secondoVal }} = {{ primoVal / secondoVal}}</p>
+</span>
