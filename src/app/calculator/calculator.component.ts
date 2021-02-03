@@ -22,4 +22,8 @@ export class CalculatorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  onButtonClicked(operator: string) {
+    this.selectedOperator = operator;
+  }
 }
